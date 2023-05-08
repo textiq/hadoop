@@ -70,7 +70,7 @@ $H4 MapReduce PI
 The following command can be used to run a sample pi map-reduce job, executing 40% of mappers using opportunistic containers:
 
 ```
-$ hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-${project.version}.jar pi -Dmapreduce.job.num-opportunistic-maps-percent="40" 50 100
+$ hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.3.jar pi -Dmapreduce.job.num-opportunistic-maps-percent="40" 50 100
 ```
 
 By changing the value of `mapreduce.job.num-opportunistic-maps-percent` in the above command, we can specify the percentage of mappers that can be executed through opportunistic containers.
@@ -80,7 +80,7 @@ $H4 Distributed Shell
 Another sample job is the distributed shell, it allows us to run a given shell command on a set of containers. The following command can be used to run `sleep 10` command in 10 opportunistic containers:
 
 ```
-$ yarn org.apache.hadoop.yarn.applications.distributedshell.Client -jar share/hadoop/yarn/hadoop-yarn-applications-distributedshell-${project.version}.jar.jar -shell_command sleep -shell_args 10 -num_containers 10 -container_type OPPORTUNISTIC
+$ yarn org.apache.hadoop.yarn.applications.distributedshell.Client -jar share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.3.jar.jar -shell_command sleep -shell_args 10 -num_containers 10 -container_type OPPORTUNISTIC
 ```
 
 By change the value of `container_type` to `OPPORTUNISTIC` or `GUARANTEED` in the above command, we can specify the tasks to be running in opportunistic or guaranteed containers. The default type is `GUARANTEED`. By adding flag `-promote_opportunistic_after_start` to the above command, application master will attempt to promote all opportunistic containers to guaranteed once they are started.

@@ -12,10 +12,10 @@
   limitations under the License. See accompanying LICENSE file.
 -->
 
-Apache Hadoop ${project.version}
+Apache Hadoop 3.3.3
 ================================
 
-Apache Hadoop ${project.version} incorporates a number of significant
+Apache Hadoop 3.3.3 incorporates a number of significant
 enhancements over the previous major release line (hadoop-3.2).
 
 Overview

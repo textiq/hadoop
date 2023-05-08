@@ -172,7 +172,7 @@
           </environmentVariables>
           <additionalClasspathElements>
             <!-- workaround for JobConf#setJarByClass -->
-            <additionalClasspathElement>${project.build.directory}/${project.artifactId}-${project.version}-tests.jar</additionalClasspathElement>
+            <additionalClasspathElement>${project.build.directory}/${project.artifactId}-3.3.3-tests.jar</additionalClasspathElement>
           </additionalClasspathElements>
         </configuration>
       </plugin>

@@ -157,7 +157,7 @@
                     <artifactItem>
                       <groupId>org.apache.hadoop</groupId>
                       <artifactId>hadoop-annotations</artifactId>
-                      <version>${project.version}</version>
+                      <version>3.3.3</version>
                       <overWrite>false</overWrite>
                       <outputDirectory>${project.build.directory}</outputDirectory>
                       <destFileName>hadoop-annotations.jar</destFileName>
@@ -195,7 +195,7 @@
                       <doclet name="org.apache.hadoop.classification.tools.IncludePublicAnnotationsJDiffDoclet"
                               path="${project.build.directory}/hadoop-annotations.jar:${project.build.directory}/jdiff.jar">
                         <param name="-apidir" value="${project.build.directory}/site/jdiff/xml"/>
-                        <param name="-apiname" value="${project.name} ${project.version}"/>
+                        <param name="-apiname" value="${project.name} 3.3.3"/>
                         <param name="${jdiff.stability}"/>
                       </doclet>
                       <packageset dir="${basedir}/src/main/java"/>
@@ -210,7 +210,7 @@
                       <doclet name="org.apache.hadoop.classification.tools.IncludePublicAnnotationsJDiffDoclet"
                               path="${project.build.directory}/hadoop-annotations.jar:${project.build.directory}/jdiff.jar:${project.build.directory}/xerces.jar">
                         <param name="-oldapi" value="${project.name} ${jdiff.stable.api}"/>
-                        <param name="-newapi" value="${project.name} ${project.version}"/>
+                        <param name="-newapi" value="${project.name} 3.3.3"/>
                         <param name="-oldapidir" value="${basedir}/${dev-support.relative.dir}/jdiff"/>
                         <param name="-newapidir" value="${project.build.directory}/site/jdiff/xml"/>
                         <param name="-javadocold"

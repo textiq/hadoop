@@ -37,7 +37,7 @@
     <!--Whether to proceed to next module if any test failures exist-->
     <maven.test.failure.ignore>true</maven.test.failure.ignore>
     <maven.test.redirectTestOutputToFile>true</maven.test.redirectTestOutputToFile>
-    <jetty.version>9.4.43.v20210629</jetty.version>
+    <jetty.version>9.4.47.v20220610</jetty.version>
     <test.exclude>_</test.exclude>
     <test.exclude.pattern>_</test.exclude.pattern>
 
@@ -71,7 +71,7 @@
     <!-- jackson versions -->
     <jackson.version>1.9.13</jackson.version>
     <jackson2.version>2.13.2</jackson2.version>
-    <jackson2.databind.version>2.13.2.2</jackson2.databind.version>
+    <jackson2.databind.version>2.14.0</jackson2.databind.version>
 
     <!-- javax ws rs api version -->
     <javax.ws.rs-api.version>2.1.1</javax.ws.rs-api.version>
@@ -88,13 +88,13 @@
     <re2j.version>1.1</re2j.version>
 
     <!--Protobuf version for backward compatibility-->
-    <protobuf.version>2.5.0</protobuf.version>
+    <protobuf.version>3.21.7</protobuf.version>
     <!-- ProtocolBuffer version, actually used in Hadoop -->
-    <hadoop.protobuf.version>3.7.1</hadoop.protobuf.version>
+    <hadoop.protobuf.version>3.21.7</hadoop.protobuf.version>
     <protoc.path>${env.HADOOP_PROTOC_PATH}</protoc.path>
 
     <hadoop-thirdparty.version>1.1.1</hadoop-thirdparty.version>
-    <hadoop-thirdparty-protobuf.version>${hadoop-thirdparty.version}</hadoop-thirdparty-protobuf.version>
+    <hadoop-thirdparty-protobuf.version>1.0-textiq</hadoop-thirdparty-protobuf.version>
     <hadoop-thirdparty-guava.version>${hadoop-thirdparty.version}</hadoop-thirdparty-guava.version>
     <hadoop-thirdparty-shaded-prefix>org.apache.hadoop.thirdparty</hadoop-thirdparty-shaded-prefix>
     <hadoop-thirdparty-shaded-protobuf-prefix>${hadoop-thirdparty-shaded-prefix}.protobuf</hadoop-thirdparty-shaded-protobuf-prefix>
@@ -211,8 +211,8 @@
     <solr.version>8.8.2</solr.version>
     <openssl-wildfly.version>1.0.7.Final</openssl-wildfly.version>
     <woodstox.version>5.3.0</woodstox.version>
-    <json-smart.version>2.4.7</json-smart.version>
-    <nimbus-jose-jwt.version>9.8.1</nimbus-jose-jwt.version>
+    <json-smart.version>2.4.9</json-smart.version>
+    <nimbus-jose-jwt.version>9.30.1</nimbus-jose-jwt.version>
     <nodejs.version>v12.22.1</nodejs.version>
     <yarnpkg.version>v1.22.5</yarnpkg.version>
     <apache-ant.version>1.10.11</apache-ant.version>
@@ -249,55 +249,55 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-assemblies</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-annotations</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-modules</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>pom</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-api</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-check-invariants</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>pom</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-check-test-invariants</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>pom</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-integration-tests</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-runtime</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client-minicluster</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <exclusions>
           <exclusion>
             <groupId>org.slf4j</groupId>
@@ -308,7 +308,7 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
         <exclusions>
           <exclusion>
@@ -324,72 +324,72 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-auth</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-auth</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-nfs</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-hdfs</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-hdfs-client</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-hdfs-rbf</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-hdfs</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-app</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-app</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-api</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-client</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-core</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <exclusions>
           <exclusion>
             <groupId>org.slf4j</groupId>
@@ -401,7 +401,7 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <exclusions>
           <exclusion>
             <groupId>org.slf4j</groupId>
@@ -413,293 +413,293 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-shuffle</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>pom</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-web-proxy</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
          <artifactId>hadoop-yarn-server-tests</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-registry</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-nodemanager</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-resourcemanager</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-resourcemanager</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-applicationhistoryservice</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-timelineservice</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-yarn-server-timelineservice</artifactId>
-          <version>${hadoop.version}</version>
+          <version>3.3.3</version>
           <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-timelineservice-hbase-client</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-timelineservice-hbase-common</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-applications-distributedshell</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-timeline-pluginstorage</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-timeline-pluginstorage</artifactId>
         <type>test-jar</type>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-server-router</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-services-core</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-services-core</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-services-api</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-yarn-applications-catalog-webapp</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>war</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
          <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-client-hs</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-mapreduce-examples</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-gridmix</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-streaming</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-archives</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-archive-logs</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-distcp</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-distcp</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-datajoin</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-rumen</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-extras</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-client</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-minicluster</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-minikdc</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-openstack</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-azure</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-azure-datalake</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-aws</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-aliyun</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-cos</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-kms</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-kms</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
         <type>test-jar</type>
       </dependency>
 
@@ -1405,12 +1405,12 @@
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-sls</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-cloud-storage</artifactId>
-        <version>${hadoop.version}</version>
+        <version>3.3.3</version>
       </dependency>
       <dependency>
         <groupId>com.google.code.findbugs</groupId>
@@ -1626,7 +1626,7 @@
           -->
         <groupId>net.minidev</groupId>
         <artifactId>json-smart</artifactId>
-        <version>${json-smart.version}</version>
+        <version>2.4.9</version>
       </dependency>
       <dependency>
         <groupId>org.skyscreamer</groupId>
@@ -1973,7 +1973,7 @@
         <plugin>
           <groupId>org.apache.hadoop</groupId>
           <artifactId>hadoop-maven-plugins</artifactId>
-          <version>${hadoop.version}</version>
+          <version>3.3.3</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -2482,7 +2482,7 @@
           <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>${hbase-server-artifactid}</artifactId>
-            <version>${hadoop.version}</version>
+            <version>3.3.3</version>
           </dependency>
         </dependencies>
       </dependencyManagement>
@@ -2509,7 +2509,7 @@
           <dependency>
             <groupId>org.apache.hadoop</groupId>
             <artifactId>${hbase-server-artifactid}</artifactId>
-            <version>${hadoop.version}</version>
+            <version>3.3.3</version>
           </dependency>
         </dependencies>
       </dependencyManagement>

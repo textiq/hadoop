@@ -70,7 +70,7 @@
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-dynamometer-workload</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
@@ -94,7 +94,7 @@
       <artifactId>hadoop-dynamometer-workload</artifactId>
       <type>test-jar</type>
       <scope>test</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
   </dependencies>
 
@@ -155,7 +155,7 @@
               <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-assemblies</artifactId>
-                <version>${project.version}</version>
+                <version>3.3.3</version>
               </dependency>
             </dependencies>
             <executions>
@@ -168,7 +168,7 @@
                 <configuration>
                   <appendAssemblyId>false</appendAssemblyId>
                   <attach>false</attach>
-                  <finalName>${project.artifactId}-${project.version}</finalName>
+                  <finalName>${project.artifactId}-3.3.3</finalName>
                   <descriptorRefs>
                     <descriptorRef>hadoop-dynamometer-infra</descriptorRef>
                   </descriptorRefs>

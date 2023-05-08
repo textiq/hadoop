@@ -59,7 +59,7 @@ $H3 Experimenting with placement constraints using distributed shell
 Users can experiment with placement constraints by using the distributed shell application through the following command:
 
 ```
-$ yarn org.apache.hadoop.yarn.applications.distributedshell.Client -jar share/hadoop/yarn/hadoop-yarn-applications-distributedshell-${project.version}.jar -shell_command sleep -shell_args 10 -placement_spec PlacementSpec
+$ yarn org.apache.hadoop.yarn.applications.distributedshell.Client -jar share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.3.3.jar -shell_command sleep -shell_args 10 -placement_spec PlacementSpec
 ```
 
 where **PlacementSpec** is of the form:

@@ -141,7 +141,7 @@
           <descriptors>
             <descriptor>src/assembly/bin.xml</descriptor>
           </descriptors>
-          <finalName>hadoop-applications-mawo-core-${project.version}</finalName>
+          <finalName>hadoop-applications-mawo-core-3.3.3</finalName>
         </configuration>
         <executions>
           <execution>

@@ -25,7 +25,7 @@
       <directory>target</directory>
       <outputDirectory>/share/hadoop/common</outputDirectory>
       <includes>
-        <include>${project.artifactId}-${project.version}.jar</include>
+        <include>${project.artifactId}-3.3.3.jar</include>
       </includes>
     </fileSet>
   </fileSets>

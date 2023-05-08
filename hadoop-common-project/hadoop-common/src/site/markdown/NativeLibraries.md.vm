@@ -89,7 +89,7 @@ Once you installed the prerequisite packages use the standard hadoop pom.xml fil
 
 You should see the newly-built library in:
 
-       $ hadoop-dist/target/hadoop-${project.version}/lib/native
+       $ hadoop-dist/target/hadoop-3.3.3/lib/native
 
 Please note the following:
 

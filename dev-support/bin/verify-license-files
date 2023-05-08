@@ -124,7 +124,7 @@ BASEDIR=$(hadoop_abs "${BINDIR}/../..")
 
 pushd "${BASEDIR}" >/dev/null
 #shellcheck disable=SC2016
-PROJ_VERSION=$(mvn -q -Dexec.executable="echo" -Dexec.args='${project.version}' --non-recursive exec:exec)
+PROJ_VERSION=$(mvn -q -Dexec.executable="echo" -Dexec.args='3.3.3' --non-recursive exec:exec)
 popd >/dev/null
 
 DIST_DIR="${BASEDIR}/hadoop-dist/target/hadoop-${PROJ_VERSION}"

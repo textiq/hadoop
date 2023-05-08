@@ -54,7 +54,7 @@ Deploying a new MapReduce version consists of three steps:
     below for more details. You can use the framework uploader tool to perform
     this step like
     `mapred frameworkuploader -target
-    hdfs:///mapred/framework/hadoop-mapreduce-${project.version}.tar#mrframework`.
+    hdfs:///mapred/framework/hadoop-mapreduce-3.3.3.tar#mrframework`.
     It will select the jar files that are in the classpath and put them into
     a tar archive specified by the -target and -fs options. The tool then returns
     a suggestion of how to set `mapreduce.application.framework.path` and
@@ -73,9 +73,9 @@ Deploying a new MapReduce version consists of three steps:
     location where the archive is located. As when specifying distributed cache
     files for a job, this is a URL that also supports creating an alias for the
     archive if a URL fragment is specified. For example,
-    `hdfs:///mapred/framework/hadoop-mapreduce-${project.version}.tar.gz#mrframework`
+    `hdfs:///mapred/framework/hadoop-mapreduce-3.3.3.tar.gz#mrframework`
     will be localized as `mrframework` rather than
-    `hadoop-mapreduce-${project.version}.tar.gz`.
+    `hadoop-mapreduce-3.3.3.tar.gz`.
 
 3.  Configure `mapreduce.application.classpath` to set the proper
     classpath to use with the MapReduce archive configured above.
@@ -106,13 +106,13 @@ The `frameworkuploader` tool mentioned above has additional parameters that help
 MapReduce Archives and Classpath Configuration
 ----------------------------------------------
 
-Setting a proper classpath for the MapReduce archive depends upon the composition of the archive and whether it has any additional dependencies. For example, the archive can contain not only the MapReduce jars but also the necessary YARN, HDFS, and Hadoop Common jars and all other dependencies. In that case, `mapreduce.application.classpath` would be configured to something like the following example, where the archive basename is hadoop-mapreduce-${project.version}.tar.gz and the archive is organized internally similar to the standard Hadoop distribution archive:
+Setting a proper classpath for the MapReduce archive depends upon the composition of the archive and whether it has any additional dependencies. For example, the archive can contain not only the MapReduce jars but also the necessary YARN, HDFS, and Hadoop Common jars and all other dependencies. In that case, `mapreduce.application.classpath` would be configured to something like the following example, where the archive basename is hadoop-mapreduce-3.3.3.tar.gz and the archive is organized internally similar to the standard Hadoop distribution archive:
 
-`$HADOOP_CONF_DIR,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/mapreduce/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/mapreduce/lib/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/common/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/common/lib/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/yarn/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/yarn/lib/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/hdfs/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/hdfs/lib/*`
+`$HADOOP_CONF_DIR,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/mapreduce/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/mapreduce/lib/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/common/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/common/lib/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/yarn/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/yarn/lib/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/hdfs/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/hdfs/lib/*`
 
 Another possible approach is to have the archive consist of just the MapReduce jars and have the remaining dependencies picked up from the Hadoop distribution installed on the nodes. In that case, the above example would change to something like the following:
 
-`$HADOOP_CONF_DIR,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/mapreduce/*,$PWD/hadoop-mapreduce-${project.version}.tar.gz/hadoop-mapreduce-${project.version}/share/hadoop/mapreduce/lib/*,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/*`
+`$HADOOP_CONF_DIR,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/mapreduce/*,$PWD/hadoop-mapreduce-3.3.3.tar.gz/hadoop-mapreduce-3.3.3/share/hadoop/mapreduce/lib/*,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/*`
 
 The `frameworkuploader` tool has the following arguments to control which jars end up in the framework tarball:
 

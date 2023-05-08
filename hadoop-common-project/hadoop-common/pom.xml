@@ -972,7 +972,7 @@
                             <argument>--fileversions</argument>
                             <argument>--dirversions</argument>
                             <argument>--version</argument>
-                            <argument>${project.version}</argument>
+                            <argument>3.3.3</argument>
                         </arguments>
                     </configuration>
                 </execution>
@@ -985,7 +985,7 @@
                 <fileset>
                   <directory>src/site/markdown/release</directory>
                     <includes>
-                      <include>${project.version}/</include>
+                      <include>3.3.3/</include>
                       <include>index.md</include>
                     </includes>
                   <followSymlinks>false</followSymlinks>

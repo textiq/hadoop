@@ -205,7 +205,7 @@
       <outputDirectory>/share/doc/hadoop/${hadoop.component}</outputDirectory>
     </fileSet>
       <fileSet>
-      <directory>hadoop-yarn/hadoop-yarn-ui/target/hadoop-yarn-ui-${project.version}</directory>
+      <directory>hadoop-yarn/hadoop-yarn-ui/target/hadoop-yarn-ui-3.3.3</directory>
       <outputDirectory>/share/hadoop/${hadoop.component}/webapps/ui2</outputDirectory>
       <includes>
         <include>**/*</include>

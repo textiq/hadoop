@@ -55,7 +55,7 @@ $H3 Start/Stop the KMS
 
 To start/stop KMS, use `hadoop --daemon start|stop kms`. For example:
 
-    hadoop-${project.version} $ hadoop --daemon start kms
+    hadoop-3.3.3 $ hadoop --daemon start kms
 
 NOTE: The script `kms.sh` is deprecated. It is now just a wrapper of
 `hadoop kms`.

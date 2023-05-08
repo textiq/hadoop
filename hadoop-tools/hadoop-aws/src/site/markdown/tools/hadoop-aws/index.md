@@ -132,12 +132,12 @@ Hadoop dependency JARs in downstream applications. The `hadoop-client` or
   <dependency>
     <groupId>org.apache.hadoop</groupId>
     <artifactId>hadoop-client</artifactId>
-    <version>${hadoop.version}</version>
+    <version>3.3.3</version>
   </dependency>
   <dependency>
     <groupId>org.apache.hadoop</groupId>
     <artifactId>hadoop-aws</artifactId>
-    <version>${hadoop.version}</version>
+    <version>3.3.3</version>
   </dependency>
 </dependencies>
 ```

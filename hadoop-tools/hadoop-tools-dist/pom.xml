@@ -79,37 +79,37 @@
       <artifactId>hadoop-pipes</artifactId>
       <scope>compile</scope>
       <type>pom</type>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-openstack</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-aws</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-kafka</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-azure</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-aliyun</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
@@ -119,20 +119,20 @@
     <dependency>
         <groupId>org.apache.hadoop</groupId>
         <artifactId>hadoop-resourceestimator</artifactId>
-        <version>${project.version}</version>
+        <version>3.3.3</version>
         <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-azure-datalake</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
     <dependency>
       <groupId>org.apache.hadoop</groupId>
       <artifactId>hadoop-fs2img</artifactId>
       <scope>compile</scope>
-      <version>${project.version}</version>
+      <version>3.3.3</version>
     </dependency>
   </dependencies>
 
@@ -168,7 +168,7 @@
               <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-assemblies</artifactId>
-                <version>${project.version}</version>
+                <version>3.3.3</version>
               </dependency>
             </dependencies>
             <executions>
@@ -181,7 +181,7 @@
                 <configuration>
                   <appendAssemblyId>false</appendAssemblyId>
                   <attach>false</attach>
-                  <finalName>${project.artifactId}-${project.version}</finalName>
+                  <finalName>${project.artifactId}-3.3.3</finalName>
                   <descriptorRefs>
                     <descriptorRef>hadoop-tools</descriptorRef>
                   </descriptorRefs>

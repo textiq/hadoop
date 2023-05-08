@@ -101,7 +101,7 @@
                 <!-- Using Unix script to preserve symlinks -->
                 <echo file="${project.build.directory}/dist-maketar.sh">
                   cd "${project.build.directory}"
-                  tar cf - ${project.artifactId}-${project.version} | gzip > ${project.artifactId}-${project.version}.tar.gz
+                  tar cf - ${project.artifactId}-3.3.3 | gzip > ${project.artifactId}-3.3.3.tar.gz
                 </echo>
                 <exec executable="${shell-executable}" dir="${project.build.directory}" failonerror="true">
                   <arg line="./dist-maketar.sh"/>
@@ -141,14 +141,14 @@
               <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-assemblies</artifactId>
-                <version>${project.version}</version>
+                <version>3.3.3</version>
               </dependency>
             </dependencies>
             <configuration>
               <tarLongFileMode>gnu</tarLongFileMode>
               <appendAssemblyId>false</appendAssemblyId>
               <attach>false</attach>
-              <finalName>${project.artifactId}-${project.version}</finalName>
+              <finalName>${project.artifactId}-3.3.3</finalName>
               <descriptorRefs>
                 <descriptorRef>hadoop-yarn-dist</descriptorRef>
               </descriptorRefs>
@@ -177,7 +177,7 @@
                 <configuration>
                   <target>
                    <echo file="${project.build.directory}/remove-duplicate-timelineservice-jars.sh">
-                      yarnjardir="${project.build.directory}/${project.artifactId}-${project.version}/share/hadoop/yarn"
+                      yarnjardir="${project.build.directory}/${project.artifactId}-3.3.3/share/hadoop/yarn"
                       yarnlibdir="${yarnjardir}/lib/"
                       cd "${yarnjardir}/timelineservice/lib"
                       for jar in `ls`

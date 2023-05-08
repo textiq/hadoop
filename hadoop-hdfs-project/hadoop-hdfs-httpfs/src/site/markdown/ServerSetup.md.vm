@@ -20,7 +20,7 @@ This page explains how to quickly setup HttpFS with Pseudo authentication agains
 Install HttpFS
 --------------
 
-    ~ $ tar xzf  httpfs-${project.version}.tar.gz
+    ~ $ tar xzf  httpfs-3.3.3.tar.gz
 
 Configure HttpFS
 ----------------
@@ -57,7 +57,7 @@ Start/Stop HttpFS
 
 To start/stop HttpFS, use `hdfs --daemon start|stop httpfs`. For example:
 
-    hadoop-${project.version} $ hdfs --daemon start httpfs
+    hadoop-3.3.3 $ hdfs --daemon start httpfs
 
 NOTE: The script `httpfs.sh` is deprecated. It is now just a wrapper of
 `hdfs httpfs`.

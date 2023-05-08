@@ -31,7 +31,7 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>../hadoop-dynamometer-blockgen/target/hadoop-dynamometer-blockgen-${project.version}/dynamometer-blockgen</directory>
+      <directory>../hadoop-dynamometer-blockgen/target/hadoop-dynamometer-blockgen-3.3.3/dynamometer-blockgen</directory>
       <outputDirectory>/share/hadoop/${hadoop.component}/dynamometer/dynamometer-blockgen</outputDirectory>
     </fileSet>
     <fileSet>
@@ -42,7 +42,7 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>../hadoop-dynamometer-workload/target/hadoop-dynamometer-workload-${project.version}/dynamometer-workload</directory>
+      <directory>../hadoop-dynamometer-workload/target/hadoop-dynamometer-workload-3.3.3/dynamometer-workload</directory>
       <outputDirectory>/share/hadoop/${hadoop.component}/dynamometer/dynamometer-workload</outputDirectory>
     </fileSet>
     <fileSet>
@@ -53,7 +53,7 @@
       </includes>
     </fileSet>
     <fileSet>
-      <directory>../hadoop-dynamometer-infra/target/hadoop-dynamometer-infra-${project.version}/dynamometer-infra</directory>
+      <directory>../hadoop-dynamometer-infra/target/hadoop-dynamometer-infra-3.3.3/dynamometer-infra</directory>
       <outputDirectory>/share/hadoop/${hadoop.component}/dynamometer/dynamometer-infra</outputDirectory>
     </fileSet>
   </fileSets>

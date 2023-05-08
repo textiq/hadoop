@@ -22,7 +22,7 @@
    <relativePath>../../hadoop-project</relativePath>
 </parent>
   <artifactId>hadoop-client-runtime</artifactId>
-  <version>3.3.3</version>
+  <version>1.4-textiq</version>
   <packaging>jar</packaging>
 
   <description>Apache Hadoop Client</description>
@@ -132,7 +132,7 @@
               <dependency>
                 <groupId>org.apache.hadoop</groupId>
                 <artifactId>hadoop-maven-plugins</artifactId>
-                <version>${project.version}</version>
+                <version>3.3.3</version>
               </dependency>
             </dependencies>
             <executions>

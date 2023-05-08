@@ -259,17 +259,17 @@ On the hbase cluster, you can get it from hdfs since we placed it there for the
 coprocessor in the step above.
 
 ```
-   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-hbase-client-${project.version}.jar <local-dir>/.
-   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-${project.version}.jar <local-dir>/.
-   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-hbase-common-${project.version}.jar <local-dir>/.
+   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-hbase-client-3.3.3.jar <local-dir>/.
+   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-3.3.3.jar <local-dir>/.
+   hadoop fs -get /hbase/coprocessor/hadoop-yarn-server-timelineservice-hbase-common-3.3.3.jar <local-dir>/.
 ```
 
 Next, add it to the hbase classpath as follows:
 
 ```
-   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-client-${project.version}.jar
-   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-${project.version}.jar
-   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-common-${project.version}.jar
+   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-client-3.3.3.jar
+   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-3.3.3.jar
+   export HBASE_CLASSPATH=$HBASE_CLASSPATH:/home/yarn/hadoop-current/share/hadoop/yarn/timelineservice/hadoop-yarn-server-timelineservice-hbase-common-3.3.3.jar
 ```
 
 Finally, run the schema creator tool to create the necessary tables:

@@ -293,7 +293,7 @@
 | [MAPREDUCE-7077](https://issues.apache.org/jira/browse/MAPREDUCE-7077) | Pipe mapreduce job fails with Permission denied for jobTokenPassword |  Critical | . | Yesha Vora | Akira Ajisaka |
 | [HDFS-13330](https://issues.apache.org/jira/browse/HDFS-13330) | ShortCircuitCache#fetchOrCreate never retries |  Major | . | Wei-Chiu Chuang | Gabor Bota |
 | [YARN-8156](https://issues.apache.org/jira/browse/YARN-8156) | Increase the default value of yarn.timeline-service.app-collector.linger-period.ms |  Major | . | Rohith Sharma K S | Charan Hebri |
-| [HADOOP-15369](https://issues.apache.org/jira/browse/HADOOP-15369) | Avoid usage of ${project.version} in parent poms |  Major | build | Elek, Marton | Elek, Marton |
+| [HADOOP-15369](https://issues.apache.org/jira/browse/HADOOP-15369) | Avoid usage of 3.3.3 in parent poms |  Major | build | Elek, Marton | Elek, Marton |
 | [YARN-8162](https://issues.apache.org/jira/browse/YARN-8162) | Remove Method DirectoryCollection#verifyDirUsingMkdir |  Major | nodemanager | Yufei Gu | Yufei Gu |
 | [YARN-7773](https://issues.apache.org/jira/browse/YARN-7773) | YARN Federation used Mysql as state store throw exception, Unknown column 'homeSubCluster' in 'field list' |  Blocker | federation | Yiran Wu | Yiran Wu |
 | [YARN-8165](https://issues.apache.org/jira/browse/YARN-8165) | Incorrect queue name logging in AbstractContainerAllocator |  Trivial | capacityscheduler | Weiwei Yang | Weiwei Yang |
